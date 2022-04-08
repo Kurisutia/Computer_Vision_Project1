@@ -21,7 +21,7 @@ def main():
     max_acc=0
     flag=-1
     pt = ('search times:{:3} \nparameters:learing_rate: {:0.3f}, lamda: {:0.4f},hide_layer:{:3}')
-    for i in range(50):
+    for i in range(100):
         print(pt.format(i,lr[i], ld[i],hd[i]))
         train_loss_set,val_loss_set,val_acc_set,net=Train_Net(inputs,labels,lr[i],ld[i],hd[i],epoch)
         acc=val_acc_set[-1]
